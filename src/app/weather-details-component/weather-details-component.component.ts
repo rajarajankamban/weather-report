@@ -15,11 +15,12 @@ export class WeatherDetailsComponentComponent implements OnInit {
     this.precipitation = 20;
     this.humidity = 10;
     this.wind = 3;
+    this.getLocation();
    }
 
   ngOnInit() {
-    this.getLocation();
-    this.weatherService.getWeatherByGeoLoc(this.latitude,this.longitude)
+    
+    this.weatherService.getWeatherByGeoLoc("17.4","78.3")
     .subscribe(report=>this.weather_report = report);
 
     console.log("JSON Response: "+ JSON.stringify(this.weather_report));
@@ -32,10 +33,10 @@ export class WeatherDetailsComponentComponent implements OnInit {
   precipitation : number;
   humidity : number;
   wind : number;
-  latitude : string;
-  longitude : string;
+  latitude : string = "";
+  longitude : string = "";
 
-  weather_report : JSON ;
+  weather_report : any ;
 
   getLocation() {
     if (navigator.geolocation) {
@@ -43,9 +44,11 @@ export class WeatherDetailsComponentComponent implements OnInit {
     }     
   }
   showPosition(position){
-    console.log("check :"+position.coords.latitude);
-    this.latitude = position.coords.latitude;
-    this.longitude = position.coords.longitude;
+    console.log("check :"+position.coords.latitude.toString());
+    //this.latitude = position.coords.latitude;
+    //this.longitude = position.coords.longitude;
+    //this.latitude = "17.4";
+    //this.longitude = "78.3";
   }
 
 }

@@ -1,8 +1,8 @@
  <!--<weather-details>-->
                 <div class="col-md-12">
-                    <div class="weather-location" [innerHTML]="location"></div>
+                    <div class="weather-location" [innerHTML]="weather_report.name"></div>
                     <div class="weather-day font-roboto" [innerHTML]="date | date:'EEEE'">Tuesday</div>
-                    <div class="weather-status font-roboto" [innerHTML]="description"></div>
+                    <div class="weather-status font-roboto" [innerHTML]="weather_report.weather[0].description"></div>
                 </div>
 <!--</weather-details>-->
 

@@ -14,12 +14,13 @@ export class WeatherService{
        const fullURL = this.weatherAPI + "&lat=" +lat+ "&lon=" +lon; 
        console.log("Long :"+lat);
        console.log("API URL: " + fullURL);
-       return this.http.get(this.weatherAPI).map(this.extractData);  
+       return this.http.get(fullURL).map(this.extractData);  
     }
 
     private extractData(res :Response){
         let body =  res.json();
-        return body.data || {}
+        console.log(JSON.stringify(body)+ "JSON :"+ body );
+        return body || {}
     }
 
 }
