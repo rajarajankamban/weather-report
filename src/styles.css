@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+
+.pull-left{float: left}
+.pull-right{float: right}
+input[type="radio"] {
+  width: 16px;
+}
+.radio-inline input[type="radio"]{
+    margin-top: -7px;
+    }
+
+input[type="text"]:required.ng-valid.ng-touched{
+  border: 1pt solid #16b316;    
+}
+input[type="text"].ng-invalid.ng-touched{
+    border: 1pt solid red;
+}
+
+
+/*Weather CSS*/
+.weather-box{
+      border: 1pt solid #d4d4d4;
+    border-radius: 2px;
+}
+
+.weather-location{
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #878787;
+}
+.font-roboto{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #878787;
+}
+
+.font-roboto-temp{
+   font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  color: #000;
+}
+
+.weather-img{
+  width: 145px;
+}
+.weather-img1{
+  width: 55px;
+}
+.weather-catalog .selected{
+  border: 1pt solid #d4d4d4;
+}
+.weather-catalog{
+  text-align: center;
+}
+.weather-box{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/*Weather CSS*/

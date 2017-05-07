@@ -1,0 +1,25 @@
+ <!--<weather-details>-->
+                <div class="col-md-12">
+                    <div class="weather-location" [innerHTML]="location"></div>
+                    <div class="weather-day font-roboto" [innerHTML]="date | date:'EEEE'">Tuesday</div>
+                    <div class="weather-status font-roboto" [innerHTML]="description"></div>
+                </div>
+<!--</weather-details>-->
+
+<div class="col-md-12">
+                     <div class="weather-img pull-left">
+                         <img src="assets/partlycloudy.svg" >
+                     </div>
+                     <div class="col-md-3">
+                        <div class="font-roboto-temp pull-left" [innerHTML]="celsius"></div>
+                        <div class="pull-left " style="margin-top:5px">
+                            °C | °F
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 pull-right font-roboto">
+                        <div>Precipitation: {{precipitation}}%</div> 
+                        <div>Humidity: {{humidity}}%</div> 
+                        <div>Wind: {{wind}}km/h</div> 
+                    </div>    
+</div>
